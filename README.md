@@ -13,8 +13,8 @@ Clear untagged images in gcr (Container Registry)
 
 ```yaml
 - name: Clear untagged images
-  uses: oncase/scora-cleaner-gcr@latest
+  uses: oncase/scora-cleaner-gcr@master
   with:
-    project_id: ${{ vars.PRJ_NAME }}
-    image_name: ${{ vars.image_name }}
+    project_id: ${{ vars.PROJECT_ID }}
+    image_name: ${{ vars.IMAGE_NAME }}
 ```
