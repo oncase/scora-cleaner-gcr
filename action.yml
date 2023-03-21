@@ -1,0 +1,15 @@
+name: 'Scora Cleaner GCR'
+description: 'Clear untagged images at container registry'
+inputs:
+  project_id:
+    description: 'Project id'
+    required: true
+  image_name:
+    description: 'Image name'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.project_id }}
+    - ${{ inputs.image_name }}
