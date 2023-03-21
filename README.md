@@ -4,18 +4,17 @@ Clear untagged images in gcr (Container Registry)
 
 ## Inputs
 
-- ### `project_id`
-
-  **Required** Project ID.
-
-- ### `image_name`
-  **Required** The name of the image you want to clean.
+|     Name     |               Description               | Required | Default |
+| :----------: | :-------------------------------------: | :------: | ------- |
+| `project_id` |       The id of your GCP project        |  `true`  | `null`  |
+| `image_name` | The name of the image you want to clean |  `true`  | `null`  |
 
 ## Example usage
 
 ```yaml
-uses: oncase/scora-cleaner-gcr@v1
-with:
-  project_id: { { vars.project_id } }
-  image_name: { { vars.image_name } }
+- name: Clear untagged images
+  uses: oncase/scora-cleaner-gcr@latest
+  with:
+    project_id: ${{ vars.PRJ_NAME }}
+    image_name: ${{ vars.image_name }}
 ```
