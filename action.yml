@@ -1,7 +1,11 @@
 name: 'Scora Cleaner GCR'
 author: Guilherme Morone <guilherme.morone@oncase.com.br>
-description: 'Clear untagged images at container registry'
+description: 'Clear untagged images at container/artifact registry'
 inputs:
+  registry:
+    description: 'Where the image is registered'
+    default: 'gcr.io'
+    required: false
   project_id:
     description: 'The id of your GCP project'
     required: true
@@ -12,5 +16,6 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
+    - ${{ inputs.registry }}
     - ${{ inputs.project_id }}
     - ${{ inputs.image_name }}

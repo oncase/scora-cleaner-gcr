@@ -1,13 +1,14 @@
 # Scora Cleaner GCR
 
-Clear untagged images in gcr (Container Registry)
+Clear untagged images in Artifact Registry or Container Registry.
 
 ## Inputs
 
-|     Name     |               Description               | Required | Default |
-| :----------: | :-------------------------------------: | :------: | ------- |
-| `project_id` |       The id of your GCP project        |  `true`  | `null`  |
-| `image_name` | The name of the image you want to clean |  `true`  | `null`  |
+|     Name     |               Description               | Required | Default  |
+| :----------: | :-------------------------------------: | :------: | -------- |
+|  `registry`  |      Where the image is registered      | `false`  | `gcr.io` |
+| `project_id` |       The id of your GCP project        |  `true`  | `null`   |
+| `image_name` | The name of the image you want to clean |  `true`  | `null`   |
 
 ## Example usage
 
