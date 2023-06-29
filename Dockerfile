@@ -1,4 +1,4 @@
-FROM google/cloud-sdk:alpine:alpine
+FROM google/cloud-sdk:alpine
 LABEL "repository"="https://github.com/oncase/scora-cleaner-gcr"
 LABEL "homepage"="https://github.com/oncase/scora-cleaner-gcr"
 LABEL "maintainer"="Oncase"
